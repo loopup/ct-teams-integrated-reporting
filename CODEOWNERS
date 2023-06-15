@@ -1,0 +1,8 @@
+# CODEOWNERS file for Repository Templates
+#
+# Use this file to specify required reviewers on pull requests. To ensure proper slack integration make sure that your
+# team is specified in this file.
+#
+# See https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners for more info.
+
+*  @loopup/p-bears @ChrisH91 @JPeaker @nnaskov @boi87 @agoodsell5
