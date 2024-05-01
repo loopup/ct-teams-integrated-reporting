@@ -20,7 +20,7 @@ if ($filterOVRP -eq "N/A" -or $filterOVRP -eq "") {
          Name='onlineVoiceRoutingPolicy'; Expression={$_.OnlineVoiceRoutingPolicy}}
 } else {
    $billingData = Get-CsOnlineUser | Where-Object {
-      $_.EnterpriseVoiceEnabled -like '*True*' -and ($_.OnlineVoiceRoutingPolicy -like "*$filterOVRP*")
+      $_.EnterpriseVoiceEnabled -like '*True*' -and ($_.OnlineVoiceRoutingPolicy -like "*$filterOVRP*") -and ($_.LineUri -notlike '')
       } | Select-Object @{
          Name='ddi'; Expression={$_.LineURI.ToLower().replace("tel:","")}
       }, @{
